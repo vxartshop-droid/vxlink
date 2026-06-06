@@ -34,7 +34,7 @@ z-index:100;
 }
 
 .logo{
-height:55px;
+height:60px;
 }
 
 .voltar{
@@ -48,9 +48,10 @@ font-weight:bold;
 
 .banner{
 margin:20px;
-height:220px;
+height:230px;
 border-radius:25px;
 background:linear-gradient(135deg,#1E5BFF,#091223);
+box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
 
 .info{
@@ -58,17 +59,17 @@ padding:0 20px;
 }
 
 .capa{
-width:140px;
-height:200px;
+width:150px;
+height:215px;
 border-radius:18px;
 background:linear-gradient(180deg,#2E67FF,#0A1222);
-margin-top:-70px;
+margin-top:-80px;
 box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
 h1{
 margin-top:20px;
-font-size:34px;
+font-size:36px;
 }
 
 .dados{
@@ -79,7 +80,7 @@ font-size:16px;
 
 .sinopse{
 margin-top:20px;
-line-height:1.6;
+line-height:1.7;
 color:#d1d5dd;
 }
 
@@ -97,11 +98,17 @@ text-decoration:none;
 padding:14px 28px;
 border-radius:14px;
 font-weight:bold;
+transition:.3s;
+}
+
+.botao:hover{
+transform:translateY(-2px);
 }
 
 .titulo{
-padding:25px 20px 15px;
+padding:35px 20px 18px;
 font-size:28px;
+font-weight:bold;
 }
 
 .lista{
@@ -116,8 +123,8 @@ display:none;
 }
 
 .card{
-min-width:140px;
-height:210px;
+min-width:145px;
+height:220px;
 border-radius:20px;
 background:linear-gradient(180deg,#2E67FF,#0A1222);
 display:flex;
@@ -125,6 +132,39 @@ align-items:flex-end;
 justify-content:center;
 padding:18px;
 font-weight:bold;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+@media(max-width:480px){
+
+.logo{
+height:50px;
+}
+
+.banner{
+height:200px;
+}
+
+.capa{
+width:130px;
+height:190px;
+margin-top:-65px;
+}
+
+h1{
+font-size:30px;
+}
+
+.botao{
+width:100%;
+text-align:center;
+}
+
 }
 
 @media(min-width:900px){
@@ -132,7 +172,7 @@ font-weight:bold;
 .banner{
 max-width:1300px;
 margin:30px auto;
-height:320px;
+height:340px;
 }
 
 .info{
@@ -176,13 +216,14 @@ Voltar
 </div>
 
 <div class="sinopse">
-Aqui ficará a sinopse completa do filme, série, dorama ou anime. Quando a API estiver pronta, essas informações serão carregadas automaticamente.
+Aqui ficará a sinopse completa do filme, série, dorama ou anime.
+Quando a API estiver pronta, essas informações serão carregadas automaticamente pela plataforma VXLINK.
 </div>
 
 <div class="botoes">
 
 <a href="player.html" class="botao">
-Assistir
+Assistir Agora
 </a>
 
 <a href="#" class="botao">
@@ -199,10 +240,21 @@ Mais como este
 
 <div class="lista">
 
+<a href="detalhes.html" style="text-decoration:none;color:inherit;">
 <div class="card">Filme 1</div>
+</a>
+
+<a href="detalhes.html" style="text-decoration:none;color:inherit;">
 <div class="card">Filme 2</div>
+</a>
+
+<a href="detalhes.html" style="text-decoration:none;color:inherit;">
 <div class="card">Filme 3</div>
+</a>
+
+<a href="detalhes.html" style="text-decoration:none;color:inherit;">
 <div class="card">Filme 4</div>
+</a>
 
 </div>
 
