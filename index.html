@@ -1,6 +1,12 @@
+<!-- ===========================
+VXLINK - INDEX.HTML
+HOME DA PLATAFORMA
+============================ -->
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,16 +23,18 @@ font-family:Arial,Helvetica,sans-serif;
 
 body{
 background:#05070D;
-color:#fff;
+color:white;
+overflow-x:hidden;
 }
 
 header{
 position:sticky;
 top:0;
-z-index:1000;
-background:#05070D;
-padding:15px;
-border-bottom:1px solid #101828;
+z-index:999;
+background:rgba(5,7,13,.92);
+backdrop-filter:blur(15px);
+padding:18px;
+border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 .topo{
@@ -36,81 +44,98 @@ align-items:center;
 }
 
 .logo{
-height:42px;
+height:45px;
 }
 
 .login{
 background:#1E5BFF;
-color:#fff;
-padding:10px 18px;
-border-radius:12px;
+color:white;
 text-decoration:none;
+padding:11px 22px;
+border-radius:14px;
 font-weight:bold;
-font-size:15px;
+transition:.3s;
+}
+
+.login:hover{
+opacity:.9;
 }
 
 .pesquisa{
-margin-top:15px;
+margin-top:18px;
 }
 
 .pesquisa input{
 width:100%;
-height:52px;
-background:#0D1528;
+height:55px;
+background:#091223;
 border:none;
-border-radius:14px;
-padding:15px;
+border-radius:16px;
+padding:18px;
 font-size:16px;
-color:#fff;
+color:white;
+}
+
+.pesquisa input:focus{
+outline:none;
 }
 
 .banner{
-margin:18px;
-height:190px;
-border-radius:20px;
-background:linear-gradient(135deg,#1E5BFF,#091124);
+margin:20px;
+height:220px;
+border-radius:25px;
+background:
+linear-gradient(
+135deg,
+#1E5BFF,
+#091223
+);
+
 display:flex;
 flex-direction:column;
 justify-content:flex-end;
-padding:25px;
-box-shadow:0 10px 25px rgba(0,0,0,.4);
+padding:30px;
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.35);
 }
 
 .banner h1{
-font-size:32px;
-margin-bottom:8px;
+font-size:42px;
+margin-bottom:10px;
 }
 
 .banner p{
-color:#d0d5dd;
-margin-bottom:15px;
+font-size:18px;
+color:#c2c7d0;
+margin-bottom:20px;
 }
 
 .assistir{
-display:inline-block;
-background:#fff;
-color:#000;
-padding:12px 20px;
-border-radius:12px;
-font-weight:bold;
+background:white;
+color:black;
 text-decoration:none;
-width:170px;
+width:180px;
 text-align:center;
+padding:15px;
+border-radius:15px;
+font-weight:bold;
 }
 
 .categoria{
-margin:20px 15px;
+padding:0 20px;
+margin-bottom:30px;
 }
 
 .categoria h2{
-margin-bottom:12px;
-font-size:22px;
+font-size:30px;
+margin-bottom:18px;
 }
 
 .lista{
 display:flex;
+gap:15px;
 overflow-x:auto;
-gap:12px;
 padding-bottom:10px;
 }
 
@@ -119,60 +144,108 @@ display:none;
 }
 
 .card{
-min-width:120px;
-height:180px;
-background:linear-gradient(180deg,#1E5BFF,#0D1528);
-border-radius:16px;
+min-width:145px;
+height:220px;
+
+border-radius:20px;
+
+background:
+linear-gradient(
+180deg,
+#2E67FF,
+#0A1222
+);
+
 display:flex;
 align-items:flex-end;
 justify-content:center;
-padding:12px;
-font-size:14px;
+
+padding:18px;
+
 font-weight:bold;
-text-align:center;
+
+box-shadow:
+0 8px 20px rgba(0,0,0,.35);
+
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.espaco{
+height:100px;
 }
 
 .menu{
+
 position:fixed;
 bottom:0;
 left:0;
+
 width:100%;
-height:70px;
-background:#091124;
-border-top:1px solid #16233f;
+height:75px;
+
+background:#08101d;
+
+border-top:
+1px solid rgba(255,255,255,.05);
+
 display:flex;
 justify-content:space-around;
 align-items:center;
+
+backdrop-filter:blur(20px);
+
 }
 
 .menu a{
+
 text-decoration:none;
-color:#fff;
-font-size:14px;
-text-align:center;
+color:#c0c6d4;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+
+font-size:12px;
+
+}
+
+.menu .icon{
+font-size:22px;
+margin-bottom:3px;
 }
 
 @media(min-width:900px){
 
+header{
+padding:20px 50px;
+}
+
 .banner{
-height:320px;
+max-width:1350px;
 margin:30px auto;
-max-width:1200px;
+height:340px;
+}
+
+.banner h1{
+font-size:55px;
+}
+
+.banner p{
+font-size:22px;
 }
 
 .categoria{
-max-width:1200px;
-margin:30px auto;
+max-width:1350px;
+margin:35px auto;
 }
 
 .card{
-min-width:180px;
-height:260px;
-font-size:18px;
-}
-
-header{
-padding:20px 50px;
+min-width:190px;
+height:280px;
 }
 
 }
@@ -196,7 +269,12 @@ Entrar
 </div>
 
 <div class="pesquisa">
-<input type="text" placeholder="🔍 Pesquisar filmes, séries, doramas...">
+
+<input
+type="text"
+placeholder="Pesquisar filmes, séries, doramas..."
+>
+
 </div>
 
 </header>
@@ -205,7 +283,9 @@ Entrar
 
 <h1>Bem-vindo à VXLINK</h1>
 
-<p>Filmes, Séries, Doramas, Animes e Novelas em um só lugar.</p>
+<p>
+Filmes, Séries, Doramas, Animes e Novelas.
+</p>
 
 <a href="login.html" class="assistir">
 Assistir Agora
@@ -214,7 +294,8 @@ Assistir Agora
 </section>
 
 <section class="categoria">
-<h2>🔥 Em Alta</h2>
+
+<h2>Em Alta</h2>
 
 <div class="lista">
 
@@ -224,10 +305,12 @@ Assistir Agora
 <div class="card">Filme 4</div>
 
 </div>
+
 </section>
 
 <section class="categoria">
-<h2>🎬 Filmes</h2>
+
+<h2>Filmes</h2>
 
 <div class="lista">
 
@@ -237,10 +320,12 @@ Assistir Agora
 <div class="card">Ficção</div>
 
 </div>
+
 </section>
 
 <section class="categoria">
-<h2>📺 Séries</h2>
+
+<h2>Séries</h2>
 
 <div class="lista">
 
@@ -250,10 +335,12 @@ Assistir Agora
 <div class="card">Série 4</div>
 
 </div>
+
 </section>
 
 <section class="categoria">
-<h2>🇰🇷 Doramas</h2>
+
+<h2>Doramas</h2>
 
 <div class="lista">
 
@@ -263,10 +350,12 @@ Assistir Agora
 <div class="card">Dorama 4</div>
 
 </div>
+
 </section>
 
 <section class="categoria">
-<h2>🎌 Animes</h2>
+
+<h2>Animes</h2>
 
 <div class="lista">
 
@@ -276,10 +365,12 @@ Assistir Agora
 <div class="card">Anime 4</div>
 
 </div>
+
 </section>
 
 <section class="categoria">
-<h2>📖 Novelas</h2>
+
+<h2>Novelas</h2>
 
 <div class="lista">
 
@@ -289,19 +380,32 @@ Assistir Agora
 <div class="card">Novela 4</div>
 
 </div>
+
 </section>
 
-<div style="height:90px;"></div>
+<div class="espaco"></div>
 
 <nav class="menu">
 
-<a href="#">🏠<br>Início</a>
+<a href="#">
+<div class="icon">⌂</div>
+Início
+</a>
 
-<a href="#">🔍<br>Buscar</a>
+<a href="#">
+<div class="icon">⌕</div>
+Buscar
+</a>
 
-<a href="#">⭐<br>Favoritos</a>
+<a href="#">
+<div class="icon">♡</div>
+Favoritos
+</a>
 
-<a href="login.html">👤<br>Conta</a>
+<a href="login.html">
+<div class="icon">◉</div>
+Conta
+</a>
 
 </nav>
 
