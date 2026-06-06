@@ -3,123 +3,176 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>VXLINK</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    background:#05070D;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
-    color:#fff;
-    padding:20px;
+background:#05070D;
+color:#fff;
 }
 
-.container{
-    width:100%;
-    max-width:420px;
-    text-align:center;
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:#05070D;
+padding:15px;
+border-bottom:1px solid #101828;
+}
+
+.topo{
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo{
-    width:320px;
-    max-width:95%;
-    margin-bottom:35px;
+height:42px;
 }
 
-h1{
-    font-size:58px;
-    font-weight:700;
-    margin-bottom:12px;
+.login{
+background:#1E5BFF;
+color:#fff;
+padding:10px 18px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+font-size:15px;
 }
 
-.subtitulo{
-    color:#8f97a3;
-    font-size:22px;
-    margin-bottom:45px;
+.pesquisa{
+margin-top:15px;
 }
 
-.input-box{
-    margin-bottom:18px;
+.pesquisa input{
+width:100%;
+height:52px;
+background:#0D1528;
+border:none;
+border-radius:14px;
+padding:15px;
+font-size:16px;
+color:#fff;
 }
 
-input{
-    width:100%;
-    height:68px;
-    background:#091124;
-    border:1px solid #101a32;
-    border-radius:18px;
-    padding:0 22px;
-    color:#ffffff;
-    font-size:20px;
-    transition:0.3s;
+.banner{
+margin:18px;
+height:190px;
+border-radius:20px;
+background:linear-gradient(135deg,#1E5BFF,#091124);
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:25px;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
 }
 
-input::placeholder{
-    color:#7b8291;
+.banner h1{
+font-size:32px;
+margin-bottom:8px;
 }
 
-input:focus{
-    outline:none;
-    border-color:#1E5BFF;
-    box-shadow:0 0 15px rgba(30,91,255,.25);
+.banner p{
+color:#d0d5dd;
+margin-bottom:15px;
 }
 
-button{
-    width:100%;
-    height:68px;
-    border:none;
-    border-radius:18px;
-    background:#1E5BFF;
-    color:#fff;
-    font-size:28px;
-    font-weight:bold;
-    cursor:pointer;
-    margin-top:10px;
-    transition:.3s;
+.assistir{
+display:inline-block;
+background:#fff;
+color:#000;
+padding:12px 20px;
+border-radius:12px;
+font-weight:bold;
+text-decoration:none;
+width:170px;
+text-align:center;
 }
 
-button:hover{
-    transform:scale(1.02);
+.categoria{
+margin:20px 15px;
 }
 
-.esqueci{
-    margin-top:35px;
-    color:#8a8f99;
-    font-size:18px;
+.categoria h2{
+margin-bottom:12px;
+font-size:22px;
 }
 
-@media (max-width:480px){
-
-.logo{
-    width:290px;
+.lista{
+display:flex;
+overflow-x:auto;
+gap:12px;
+padding-bottom:10px;
 }
 
-h1{
-    font-size:50px;
+.lista::-webkit-scrollbar{
+display:none;
 }
 
-.subtitulo{
-    font-size:18px;
+.card{
+min-width:120px;
+height:180px;
+background:linear-gradient(180deg,#1E5BFF,#0D1528);
+border-radius:16px;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+padding:12px;
+font-size:14px;
+font-weight:bold;
+text-align:center;
 }
 
-input{
-    height:62px;
-    font-size:18px;
+.menu{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+height:70px;
+background:#091124;
+border-top:1px solid #16233f;
+display:flex;
+justify-content:space-around;
+align-items:center;
 }
 
-button{
-    height:62px;
-    font-size:24px;
+.menu a{
+text-decoration:none;
+color:#fff;
+font-size:14px;
+text-align:center;
+}
+
+@media(min-width:900px){
+
+.banner{
+height:320px;
+margin:30px auto;
+max-width:1200px;
+}
+
+.categoria{
+max-width:1200px;
+margin:30px auto;
+}
+
+.card{
+min-width:180px;
+height:260px;
+font-size:18px;
+}
+
+header{
+padding:20px 50px;
 }
 
 }
@@ -130,31 +183,127 @@ button{
 
 <body>
 
-<div class="container">
+<header>
+
+<div class="topo">
 
 <img src="logo.png" class="logo">
 
-<h1>Bem-vindo!</h1>
-
-<p class="subtitulo">
-Acesse sua conta para continuar
-</p>
-
-<div class="input-box">
-<input type="text" placeholder="E-mail ou usuário">
-</div>
-
-<div class="input-box">
-<input type="password" placeholder="Senha">
-</div>
-
-<button>Entrar</button>
-
-<p class="esqueci">
-Esqueci minha senha
-</p>
+<a href="login.html" class="login">
+Entrar
+</a>
 
 </div>
+
+<div class="pesquisa">
+<input type="text" placeholder="🔍 Pesquisar filmes, séries, doramas...">
+</div>
+
+</header>
+
+<section class="banner">
+
+<h1>Bem-vindo à VXLINK</h1>
+
+<p>Filmes, Séries, Doramas, Animes e Novelas em um só lugar.</p>
+
+<a href="login.html" class="assistir">
+Assistir Agora
+</a>
+
+</section>
+
+<section class="categoria">
+<h2>🔥 Em Alta</h2>
+
+<div class="lista">
+
+<div class="card">Filme 1</div>
+<div class="card">Filme 2</div>
+<div class="card">Filme 3</div>
+<div class="card">Filme 4</div>
+
+</div>
+</section>
+
+<section class="categoria">
+<h2>🎬 Filmes</h2>
+
+<div class="lista">
+
+<div class="card">Ação</div>
+<div class="card">Comédia</div>
+<div class="card">Terror</div>
+<div class="card">Ficção</div>
+
+</div>
+</section>
+
+<section class="categoria">
+<h2>📺 Séries</h2>
+
+<div class="lista">
+
+<div class="card">Série 1</div>
+<div class="card">Série 2</div>
+<div class="card">Série 3</div>
+<div class="card">Série 4</div>
+
+</div>
+</section>
+
+<section class="categoria">
+<h2>🇰🇷 Doramas</h2>
+
+<div class="lista">
+
+<div class="card">Dorama 1</div>
+<div class="card">Dorama 2</div>
+<div class="card">Dorama 3</div>
+<div class="card">Dorama 4</div>
+
+</div>
+</section>
+
+<section class="categoria">
+<h2>🎌 Animes</h2>
+
+<div class="lista">
+
+<div class="card">Anime 1</div>
+<div class="card">Anime 2</div>
+<div class="card">Anime 3</div>
+<div class="card">Anime 4</div>
+
+</div>
+</section>
+
+<section class="categoria">
+<h2>📖 Novelas</h2>
+
+<div class="lista">
+
+<div class="card">Novela 1</div>
+<div class="card">Novela 2</div>
+<div class="card">Novela 3</div>
+<div class="card">Novela 4</div>
+
+</div>
+</section>
+
+<div style="height:90px;"></div>
+
+<nav class="menu">
+
+<a href="#">🏠<br>Início</a>
+
+<a href="#">🔍<br>Buscar</a>
+
+<a href="#">⭐<br>Favoritos</a>
+
+<a href="login.html">👤<br>Conta</a>
+
+</nav>
 
 </body>
 </html>
