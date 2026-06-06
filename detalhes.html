@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detalhes - VXLINK</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:#05070D;
+color:white;
+}
+
+header{
+padding:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(5,7,13,.95);
+backdrop-filter:blur(15px);
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+height:55px;
+}
+
+.voltar{
+color:white;
+text-decoration:none;
+background:#1E5BFF;
+padding:10px 18px;
+border-radius:12px;
+font-weight:bold;
+}
+
+.banner{
+margin:20px;
+height:220px;
+border-radius:25px;
+background:linear-gradient(135deg,#1E5BFF,#091223);
+}
+
+.info{
+padding:0 20px;
+}
+
+.capa{
+width:140px;
+height:200px;
+border-radius:18px;
+background:linear-gradient(180deg,#2E67FF,#0A1222);
+margin-top:-70px;
+box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+h1{
+margin-top:20px;
+font-size:34px;
+}
+
+.dados{
+margin-top:10px;
+color:#aeb6c7;
+font-size:16px;
+}
+
+.sinopse{
+margin-top:20px;
+line-height:1.6;
+color:#d1d5dd;
+}
+
+.botoes{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.botao{
+background:#1E5BFF;
+color:white;
+text-decoration:none;
+padding:14px 28px;
+border-radius:14px;
+font-weight:bold;
+}
+
+.titulo{
+padding:25px 20px 15px;
+font-size:28px;
+}
+
+.lista{
+display:flex;
+gap:15px;
+overflow-x:auto;
+padding:0 20px 30px;
+}
+
+.lista::-webkit-scrollbar{
+display:none;
+}
+
+.card{
+min-width:140px;
+height:210px;
+border-radius:20px;
+background:linear-gradient(180deg,#2E67FF,#0A1222);
+display:flex;
+align-items:flex-end;
+justify-content:center;
+padding:18px;
+font-weight:bold;
+}
+
+@media(min-width:900px){
+
+.banner{
+max-width:1300px;
+margin:30px auto;
+height:320px;
+}
+
+.info{
+max-width:1300px;
+margin:auto;
+}
+
+.lista{
+max-width:1300px;
+margin:auto;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="voltar">
+Voltar
+</a>
+
+<img src="logo.png" class="logo">
+
+</header>
+
+<div class="banner"></div>
+
+<div class="info">
+
+<div class="capa"></div>
+
+<h1>Nome do Filme</h1>
+
+<div class="dados">
+2025 • Ação • 2h 10min
+</div>
+
+<div class="sinopse">
+Aqui ficará a sinopse completa do filme, série, dorama ou anime. Quando a API estiver pronta, essas informações serão carregadas automaticamente.
+</div>
+
+<div class="botoes">
+
+<a href="player.html" class="botao">
+Assistir
+</a>
+
+<a href="#" class="botao">
+Favoritar
+</a>
+
+</div>
+
+</div>
+
+<div class="titulo">
+Mais como este
+</div>
+
+<div class="lista">
+
+<div class="card">Filme 1</div>
+<div class="card">Filme 2</div>
+<div class="card">Filme 3</div>
+<div class="card">Filme 4</div>
+
+</div>
+
+</body>
+</html>
